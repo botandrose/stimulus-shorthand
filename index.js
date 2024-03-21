@@ -9,7 +9,9 @@ export default function shorthand({ controller, value }) {
       if(valueValue) {
         // expand to full stimulus declaration
         element.setAttribute(`${shorthandAttribute}-${value}-value`, valueValue)
-        element.setAttribute("data-controller", controller)
+        let controllers = (element.getAttribute("data-controller") || "").split(" ")
+        controllers.push(controller)
+        element.setAttribute("data-controller", controllers.join(" "))
         element.removeAttribute(shorthandAttribute)
       }
     },
