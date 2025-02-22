@@ -3,7 +3,7 @@ import { ValueListObserver } from "@hotwired/stimulus"
 export default function shorthand({ controller, value }) {
   const shorthandAttribute = `data-${controller}`
 
-  new ValueListObserver(document.body, shorthandAttribute, {
+  new ValueListObserver(document.firstElementChild, shorthandAttribute, {
     elementMatchedValue: function(element, _value) {
       const valueValue = element.getAttribute(shorthandAttribute)
       if(valueValue) {
