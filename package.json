@@ -1,6 +1,6 @@
 {
   "name": "stimulus-shorthand",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Function for configuring abbreviated html for instantiating simple stimulus controllers",
   "main": "index.js",
   "scripts": {
